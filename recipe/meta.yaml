@@ -47,6 +47,7 @@ test:
 about:
   home: https://github.com/segmentio/analytics-python
   summary: The hassle-free way to integrate analytics into any python application.
+  description: The hassle-free way to integrate analytics into any python application.
   license: MIT
   license_family: MIT
   license_file: LICENSE
