@@ -47,7 +47,10 @@ test:
 about:
   home: https://github.com/segmentio/analytics-python
   summary: The hassle-free way to integrate analytics into any python application.
-  description: The hassle-free way to integrate analytics into any python application.
+  description: |
+      Segment is the simplest way to integrate analytics into your application.
+      One API allows you to turn on any other analytics service. No more learning
+      new APIs, repeated code, and wasted development time.
   license: MIT
   license_family: MIT
   license_file: LICENSE
