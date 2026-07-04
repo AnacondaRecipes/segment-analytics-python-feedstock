@@ -1,13 +1,13 @@
 {% set name = "segment-analytics-python" %}
-{% set version = "2.2.3" %}
+{% set version = "2.3.6" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/segment-analytics-python/segment-analytics-python-2.2.3.tar.gz
-  sha256: 0df5908e3df74b4482f33392fdd450df4c8351bf54974376fbe6bf33b0700865
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: b07779d90432399fdd08f8cbeb483139cab862b5dca1bb3f0711f415def776a8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -26,6 +26,7 @@ requirements:
     - backoff >=2.1,<3.0
     - python-dateutil >=2.2,<3.0
     - monotonic >=1.5,<2.0
+    - pyjwt >=2.12,<3.0
 
 test:
   imports:
@@ -45,9 +46,9 @@ about:
   home: https://github.com/segmentio/analytics-python
   summary: The hassle-free way to integrate analytics into any python application.
   description: |
-      Segment is the simplest way to integrate analytics into your application.
-      One API allows you to turn on any other analytics service. No more learning
-      new APIs, repeated code, and wasted development time.
+    Segment is the simplest way to integrate analytics into your application.
+    One API allows you to turn on any other analytics service. No more learning
+    new APIs, repeated code, and wasted development time.
   license: MIT
   license_family: MIT
   license_file: LICENSE
